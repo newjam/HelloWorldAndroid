@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<PreferenceScreen xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <PreferenceCategory
+        android:title="A Category"
+        android:key="first_category">
+
+    </PreferenceCategory>
+
+    <CheckBoxPreference
+        android:title="Automatically Eat Cakes"
+        android:summary="Enable or disable automatically eating cakes"
+        android:key="auto_eat_cake"
+        android:defaultValue="true"/>
+
+    <ListPreference
+        android:key="eat_cake_interval"
+        android:title="Cake Eating Interval"
+        android:summary="How often do you want cakes eaten?"
+        android:defaultValue="1000"
+        android:entries="@array/eat_cake_interval_labels"
+        android:entryValues="@array/eat_cake_interval_values"
+        android:dependency="auto_eat_cake">
+
+    </ListPreference>
+</PreferenceScreen>
